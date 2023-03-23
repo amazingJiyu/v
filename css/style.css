@@ -13,7 +13,5 @@ form{width:100%;}
 #sec3 ul li{padding:5px;border-bottom:1px dashed #ddd;display: flex;display: flex;align-items: center;justify-content: space-between;width: 100%;}
 #sec3 ul li button{width:40px;height:40px;}
 #sec4 #quote{font-size: 25px;}
-#sec4 #quote b{display:block;margin-top:10px}
-
-
+#sec4 #quote strong{display:block;margin-top:10px}
 #sec6 button{background:#fff;border:1px solid #000;color:#000;}
