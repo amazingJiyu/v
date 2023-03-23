@@ -31,8 +31,8 @@
 
     <section id="sec4">
         <div id="quote">
-            <span></span>
-            <span></span>
+            "<i></i>"<br>
+            - <strong></strong>
         </div>
     </section>
 
