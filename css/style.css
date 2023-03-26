@@ -9,7 +9,7 @@ input{font-size:16px;height:40px;line-height: 40px;width:100%;padding:5px 10px;b
 button{font-size:16px;height:35px;line-height: 35px;width:100%;padding:5px 10px;border:0;border-radius:5px;display:block;margin:5px 0;background:#ff6000;color:#fff;outline: 0;display: flex;align-items: center;justify-content: center;}
 form{width:100%;}
 
-h2{font-size:30px;margin-bottom:15px;}
+.secTitle{font-size:30px;margin-bottom:15px;}
 
 #sec3 ul {width:100%;}
 #sec3 ul li{padding:5px;border-bottom:1px dashed #ddd;display: flex;display: flex;align-items: center;justify-content: space-between;width: 100%;}
