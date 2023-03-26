@@ -1,7 +1,7 @@
 .hidden{display:none;}
 
 body{background:#f5f5f5}
-body,body *{margin:0;padding:0;box-sizing: border-box;font-size:55px;}
+body,body *{margin:0;padding:0;box-sizing: border-box;}
 span{font-size:inherit;}
 ul, li{list-style: none;font-size:16px;margin:5px 0;}
 section{text-align: center;padding:150px;flex-direction: column;background:#fff;height:60vh;width:80%;max-width:700px;display:flex;align-items: center;justify-content: center;margin:100px auto;}
@@ -15,6 +15,5 @@ form{width:100%;}
 #sec3 ul li{padding:5px;border-bottom:1px dashed #ddd;display: flex;display: flex;align-items: center;justify-content: space-between;width: 100%;}
 #sec3 ul li button{width:40px;height:40px;}
 #sec4 #quote {font-size: 20px;line-height: 1.25;}
-#sec4 i{font-size:1em;}
-#sec4 #quote strong{display:block;margin-top:10px;font-size: 25px;}
+#sec4 #quote strong{display:block;margin-top:10px;}
 #sec6 button{background:#fff;border:1px solid #000;color:#000;}
