@@ -4,7 +4,7 @@ body{background:#f5f5f5}
 body,body *{margin:0;padding:0;box-sizing: border-box;}
 span{font-size:inherit;}
 ul, li{list-style: none;font-size:16px;margin:5px 0;}
-section{text-align: center;padding:150px;flex-direction: column;background:#fff;height:60vh;width:80%;max-width:700px;display:flex;align-items: center;justify-content: center;margin:100px auto;}
+section{text-align: center;padding:10vw;flex-direction: column;background:#fff;min-height:45vh;width:80%;max-width:700px;display:flex;align-items: center;justify-content: center;margin:10vh auto;}
 input{font-size:16px;height:40px;line-height: 40px;width:100%;padding:5px 10px;border:0;border-radius:5px;display:block;margin:5px 0;border:1px solid #ddd;}
 button{font-size:16px;height:35px;line-height: 35px;width:100%;padding:5px 10px;border:0;border-radius:5px;display:block;margin:5px 0;background:#ff6000;color:#fff;outline: 0;display: flex;align-items: center;justify-content: center;}
 form{width:100%;}
