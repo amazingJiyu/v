@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLOCK</title>
+</head>
+<body>
+<style>
+html,body{padding:0;margin:0}
+body{
+  background:#444;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap :wrap;
+  align-content: center;
+}
+.clock{
+  width:400px;
+  height:400px;
+  border:20px solid #838383;
+  padding:2rem;
+  border-radius:50%;
+  position:relative;
+}
+.clock:before{
+  position: absolute;top: calc(50% - 10px);left: calc(50% - 10px);content: '';width: 20px;height: 20px;border-radius: 50%;background: #fff;
+}
+.clock-face{
+  width:100%;
+  height:100%;
+  position:relative;
+}
+.hand{
+  width:50%;
+  background:#eee;
+  position:absolute;
+  left:0;
+  transition:all .05s;
+  transform-origin: 100%;
+  transition-timing-function: cubic-bezier(0.12, 1.49, 0, 1.1);
+  border-radius:25px;
+}
+
+.hour-hand{
+  width: 37%;
+  left: 13%;
+  height:8px;
+  top:calc(50% - 4px)
+}
+
+.min-hand{
+  height:4px;
+  top:calc(50% - 2px);
+  background:#ffef0b;
+}
+
+.sec-hand{
+  height:2px;
+  opacity: .6;
+  top:calc(50% - 1px)
+}
+
+.digital-clock{
+  width:100%;
+  margin-top:30px;
+  color:#fff;
+  text-align:center;
+  font-weight:bold;
+  font-size:2rem;
+  font-family: Helvetica, sans-serif;
+}
+
+</style>
+  
+
+<div class="clock">
+  <div class="clock-face">
+    <div class="hand hour-hand"></div>
+    <div class="hand min-hand"></div>
+    <div class="hand sec-hand"></div>
+  </div>
+</div>
+<div class="digital-clock"></div>
+
+<script>
+
+window.addEventListener("load",function(){
+  setDate();
+})
+
+const secHand = document.querySelector(".sec-hand");
+const minHand = document.querySelector(".min-hand");
+const hourHand = document.querySelector(".hour-hand");
+
+const digitalClock = document.querySelector(".digital-clock");
+
+function setDate (){
+  const now = new Date(); // 현재시간 구하기
+
+  const seconds = now.getSeconds();
+  const secondsDegrees = ((seconds / 60) * 360) + 90;
+  secHand.style.transform = `rotate(${secondsDegrees}deg)`;
+
+  const minutes = now.getMinutes();
+  const minsDegrees = ((minutes / 60) * 360) + 90;
+  minHand.style.transform = `rotate(${minsDegrees}deg)`;
+
+  const hours = now.getHours();
+  const hoursDegrees = ((hours / 12) * 360) + 90;
+  hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
+
+  const dgtSec = String(seconds).padStart(2, '0');
+  const dgtMin = String(minutes).padStart(2, '0');
+  const dgtHour = String(hours).padStart(2, '0');
+
+  digitalClock.innerText = `${dgtHour} : ${dgtMin} : ${dgtSec}`
+
+}
+
+setInterval(setDate,1000);
+
+
+
+</script>
+</body>
+</html>
